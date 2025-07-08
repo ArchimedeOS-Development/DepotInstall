@@ -4,7 +4,7 @@
 ARCH=$(uname -m)
 
 MIRROR_F='archimedeos-mirrorlist'
-MIRROR_URL='https://github.com/ArchimedeOS-Development/mirrorlist/blob/main/archimedeos-mirrorlist'
+MIRROR_URL='https://github.com/ArchimedeOS-Development/mirrorlist/raw/main/archimedeos-mirrorlist'
 KEYRING_URL='https://github.com/ArchimedeOS-Development/ArchimedeOS-Development.github.io/raw/main/x86_64/archimedeos-keyring-20250612-3-any.pkg.tar.zst'
 KEYRING_SIG_URL='https://github.com/ArchimedeOS-Development/ArchimedeOS-Development.github.io/raw/main/x86_64/archimedeos-keyring-20250612-3-any.pkg.tar.zst.sig'
 GPG_KEY_ID='6C250CE3FE1635D3A3346BDD7F068AC1F1E5B246'
