@@ -1,5 +1,5 @@
 #!/bin/sh
-# strap-archimedeos.sh - Installe le dépôt ArchimèdeOS sur Arch Linux
+# eureka.sh
 
 ARCH=$(uname -m)
 
@@ -18,7 +18,7 @@ msg() { echo "$(tput bold; tput setaf 2)[+] ${*}$(tput sgr0)"; }
 check_priv() { [ "$(id -u)" -eq 0 ] || err "Vous devez être root."; }
 
 make_tmp_dir() {
-  tmp="$(mktemp -d /tmp/archimedeos_strap.XXXXXXXX)"
+  tmp="$(mktemp -d /tmp/eureka.XXXXXXXX)"
   trap 'rm -rf $tmp' EXIT
   cd "$tmp" || err "Impossible d'entrer dans $tmp"
 }
@@ -92,7 +92,7 @@ archimedeos_setup() {
   check_internet
   add_gpg_opts
   fetch_keyring
-  #verify_keyring # Décommente si tu veux vérifier la signature
+  #verify_keyring
   delete_signature
   check_pacman_gnupg
   install_keyring
