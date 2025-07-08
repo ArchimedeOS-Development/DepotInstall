@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 # strap-archimedeos.sh - Installe le dépôt ArchimèdeOS sur Arch Linux
 
 ARCH=$(uname -m)
@@ -59,7 +59,7 @@ install_keyring() {
 get_mirror() {
   mirror_p="/etc/pacman.d"
   msg "Téléchargement de la liste des miroirs..."
-  curl -s "$MIRROR_URL" -o "$mirror_p/$MIRROR_F" || err "Impossible de télécharger la mirrorlist"
+  curl -Ls "$MIRROR_URL" -o "$mirror_p/$MIRROR_F" || err "Impossible de télécharger la mirrorlist"
   msg "Vous pouvez modifier le miroir par défaut dans $mirror_p/$MIRROR_F"
 }
 
