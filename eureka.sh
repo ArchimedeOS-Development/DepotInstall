@@ -1,6 +1,8 @@
 #!/bin/sh
 # eureka.sh
 
+set -euo pipefail
+
 ARCH=$(uname -m)
 
 MIRROR_F='archimedeos-mirrorlist'
